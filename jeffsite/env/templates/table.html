@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>{{title}} | JEFFSITE</title>
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <script src = "/scripts/script.js"></script>
+    </head>
+<body>
+    <h1>{{table_name}}</h1>
+    <div class = "rawdata__container">
+        {# <div class = "rd-table">
+            <table>
+                <tr>
+                    
+                    {%for column in table_columns %}
+                        <th>{{column}}</th>
+                    {% endfor %}
+                </tr>
+                
+                {% for row in table_data %}
+                    <tr>
+                        {% for data in row %}
+                            <td>{{data}}</td>
+                        {% endfor %}
+                    </tr>           
+                {% endfor %}     
+            </table>
+        </div> #}
+        <div class ="rd-buttons">
+            
+            {# <form id = "create-form" method = "get">
+                <button name = "createTable" value = "create">Create Table</button>
+                <div class = "create__table-container">
+                    <label for="" class = "add"></label>
+                    <input type = "button"  name = "add" placeholder="TABLE" required class = "add__button">
+                </div>
+            </form>
+ #}
+
+            {# <form id = "drop-form" method = "post">
+                <button class = "drop" type ="submit">Drop Table</button>
+
+                <div class = "drop__table-container">
+                    <label for="" class = "drop__label"></label>
+                    <input class ="input__box" type = "text"  name = "drop" placeholder="TABLE">
+                </div>
+            </form> #}
+            {# <label for="" class = "drop__label"></label>
+                        <input class = "input__box" type = "text"  name = "show" placeholder="TABLE"> #}
+            <form id = "show_table-form" method = "get">
+                <div class = "dropdown">
+                    <button class = "dropbtn" type = "submit">Tables</button>
+                    <div class = "dropdown-content">
+                        <button class = "drop-buttons" name = "createTable" value = "create">Create Table</button>
+                        <button class = "drop-buttons" name = "dropTable" value ="drop">Drop Table</button>
+                        <button class = "drop-buttons" id = "show-id" name = "showTable" value ="show">Show Tables</button>
+                        
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+        
+    </div>
+</body>    
+</html>

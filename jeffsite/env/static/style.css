@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #b3ffac;
+}
+table{
+    background-color: black;
+
+    text-align: center;
+}
+form{
+    margin: 0px;
+}
+tr{
+    background-color: white;
+}
+td, th{
+    padding: 5px;
+    
+}
+.large__container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.rawdata__container{
+    display: block;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.rd-table{
+    background-color: white;
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+}
+
+#db-buttons:hover{
+    background-color: red;
+}
+
+.rd-buttons{
+    margin: 15px;
+    padding: 20px;
+}
+/* .existing-dbs{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+.db-stuff{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.existing-tables{
+    /* padding: 10px; */
+    display: block;
+    margin-left: 5px;
+    margin-right: auto;
+    height: fit-content;
+}
+.et-stuff{
+    background-color: white;
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+}
+h1{
+    display: grid;
+    justify-content: center;
+}
+
+
+.input__box{
+    margin: 15px;
+}
+button{
+    padding: 10px;
+    margin: 15px;
+}
+.dropdwn-container {
+    text-align: center; /* Center the dropdown container horizontally */
+}
+.dropbtn{
+    background-color: white;
+    border: none;
+    font-size: larger;
+}
+.drop-buttons{
+    /* text-decoration: none; */
+    background-color: white;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    background-color:white;
+    min-width: 160px;
+    /* border: 3px solid blue; */
+    background-color: black;
+    color: whites;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+}
+.dropdown-content{
+    text-align: center; /* Center the dropdown container horizontally */
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:1;
+}
+.dropdown-content .drop-buttons {
+    text-align: center; /* Center the dropdown container horizontally */
+    
+    display: block;
+    border: none;
+    padding: 10px 10px;
+}
+
+.dropdown-content .drop-buttons:hover {
+    text-align: center; /* Center the dropdown container horizontally */
+
+    display: block;
+    background-color: #ddd;}
+.dropdown:hover .dropdown-content {
+    text-align: center; /* Center the dropdown container horizontally */
+
+    background-color: black;
+    display: flex;
+}
+.dropdown:hover .dropbtn{
+    text-align: center; /* Center the dropdown container horizontally */
+
+    background-color: #f60;
+}

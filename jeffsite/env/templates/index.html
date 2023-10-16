@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>HOME | JEFFSITE</title>
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="/static/style.css">
+        <script src = "/scripts/script.js"></script>
+    </head>
+<body>
+    <h1>{{table_name}}</h1>
+    <div class = "dropdwn-container">
+
+        <div class ="rd-buttons">
+            
+                <div class = "dropdown">
+                    <button class = "dropbtn" type = "submit">Tables</button>
+                    <div class = "dropdown-content">
+                        <form id = "tablestuff1-form" method = "get">
+                            <button class = "drop-buttons" name = "createTable" value = "create">Create Table</button>
+                            <button class = "drop-buttons" name = "dropTable" value ="drop">Drop Table</button>
+                            <button class = "drop-buttons" name = "popTable" value ="pop">Populate Table</button>
+                            <button class = "drop-buttons" id = "show-id" name = "showTable" value ="show">Show Tables</button>
+                        </form>
+                    </div>
+                </div>
+            
+        </div>
+        
+    </div>
+</body>    
+</html>

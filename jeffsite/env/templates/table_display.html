@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>{{title}} | JEFFSITE</title>
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" href="/static/style.css">
+        {# <script src = "/Scripts/script.js"></script> #}
+    </head>
+<body>
+    <nav>
+        <form method = "get">
+            <button name = "returnHome" value = "home">Home</button>
+            <button name = "selectDB"   value = "home">SELECT DB</button>
+        </form>
+        <form method = "post" enctype="multipart/form-data">
+            <div>
+                <label for="file">Choose file to upload</label>
+                <input
+                    accept = ".db" 
+                    type="file" id="file" name="file" 
+                    value ="Upload"
+                    multiple />
+            </div>
+            <div>
+                <button type = "submit" value="Upload">Submit</button>
+            </div>
+        </form>
+        <div class = "existing-dbs">
+            <h1>Existing DBS</h1>
+
+            <div class = "db-stuff">
+                <table>
+                    <form id = "existing__db-form" method = "get">
+                        {% for db in db_list %}
+                            <tr>
+                                <td><button class = "db-buttons" name = "requestDB" value = "{{db}}">{{db}}</button></td>
+
+                            </tr>
+                        {% endfor %}
+                    </form>
+                    
+                </table>
+            </div>
+            <input type="hidden" id="selectedDb" name="selectedDb" value="{{selectedDb}}">
+        </div>
+    </nav>
+    <script>
+        let selectedDbValue = ''; // This will hold the clicked DB's value
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const dbButtons = document.querySelectorAll(".db-buttons");
+            const tableButtons = document.querySelectorAll(".table-button");
+
+            dbButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    selectedDbValue = button.value;
+
+                    // Update table button values based on the selected DB button
+                    tableButtons.forEach(tableButton => {
+                        tableButton.value = `${tableButton.value} ${selectedDbValue}`;
+                    });
+                });
+            });
+        });
+    </script>
+    <div class = "large__container">
+        <div class = "rawdata__container">
+
+            <div class = "rd-table">
+                <h1>{{table_name}}</h1>
+                <table>
+                    <tr>
+                        
+                        {%for column in table_columns %}
+                            <th>{{column}}</th>
+                        {% endfor %}
+                    </tr>
+                    
+                    {% for row in table_data %}
+                        <tr>
+                            {% for data in row %}
+                                <td>{{data}}</td>
+                            {% endfor %}
+                        </tr>           
+                    {% endfor %}     
+                </table>
+            </div>
+        </div>
+        {# YOU NEED TO SEND ALONG THE VALUE OF THE CURRENT DB TO THE SERVER#}
+        <div class = "existing-tables">
+            <div class = "et-stuff">
+                <h1>Existing Tables</h1>
+                <table>
+                    <form id = "existing__tables-form" method = "get">
+                        {% for table in table_list %}
+                            <tr>
+                                <td><button class = "table-buttons" name = "requestTable" value = "{{table}}" >{{table}}</button></td>
+                            </tr>
+                        {% endfor %}
+                    </form>
+                    
+                </table>
+            </div>
+        {# THIS SHOULD BE JAVA SCRIPT #}
+
+        </div>
+        
+    </div>
+    
+    
+</body>    
+</html>
