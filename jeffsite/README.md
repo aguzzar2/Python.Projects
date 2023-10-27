@@ -1,22 +1,7 @@
-HEALTHCARE PROVIDERS BILL SERVICES:
-- Analysis for REVENUE and PAYMENTS
--- Organizing Client Payments 
---- For example blue cross blue shield sends
+# My Project
 
-DROP DOWN FILTERS AS REPORTED DATABASE
-MANUEL feedback loop table shows what has already changed.
+This is a **bold text** in Markdown.
 
-Company Founder: Jeff Fischer
-Developer:  Anthony Guzzardo
+This is <strong style="color: red;">red and bold text</strong> using inline HTML and CSS.
 
-Web Framework: 
-- Utilizes Flask Framework
-- Goal is fast Prototype
-
-Backend: 
-- Client Data is Refreshed Nightly (Once Daily)
-
-Project Structure:
-- Python 3 
-- Flask web Framework -- version 2.3.3 (python -c "import flask; print(flask.__version__)")
-- SQlite
+This is <span style="font-family: 'Courier New', Courier, monospace;">monospaced text</span> using inline HTML and CSS.
