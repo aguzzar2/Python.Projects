@@ -12,7 +12,8 @@ This README provides detailed instructions and information about the Flask appli
 **Installation**
 
 1. Clone Repo
-PS C:\> git clone https://github.com/username/repository.git
+'''python
+PS C:\> git clone https://github.com/username/repository.git'''
 2. Navigate to project directory.
 PS C:\> cd your-repository
 3.Create virtual environment, and activate.
