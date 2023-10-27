@@ -15,8 +15,6 @@ Web Framework:
 
 Backend: 
 - Client Data is Refreshed Nightly (Once Daily)
--- HOW?? Database Software probably mysql
-
 
 Project Structure:
 - Python 3 
