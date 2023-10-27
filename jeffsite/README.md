@@ -9,13 +9,13 @@ This README provides detailed instructions and information about the Flask appli
 + Viewing Table Data
 
 ## Requirements
-- Python 3.6 or Later (an)
+- Python 3.6 or Later
 - Flask 
-- Native SQLite3
+- SQLite
 
 **Installation**
 
-1. Clone GitHub Repository to your Machine
+1. Clone GitHub Repository to your Local Machine
 ```powershell
 git clone https://github.com/aguzzar2/Python.Projects.git
 ```
@@ -23,36 +23,39 @@ git clone https://github.com/aguzzar2/Python.Projects.git
 ```powershell
 cd Python.Projects
 ```
-3. Create a Virtual Environment
+3. Check if Python is Installed
+```powershell
+python --version
+``` 
+4. Create a Virtual Environment 
 ```powershell
 python3 -m venv env
 ```
 
-## Activate Virtutal Environment
+## Activating Virtutal Environment
 ```powershell
 ./env/Scripts/activate
 ```
+You will see something like <strong>'(env) PS C:\Users'</strong> indicating the virtual environment was created successfully! In this case (env) is the name of my environment.
 
-## Install Packages
+## Executing
+<p>This Web Application is going to be executed using the <strong>app.py</strong> file.
+<p>You can run it from the parent directory by using the command: </p>
 
 ```powershell
-py -m pip install requests
+flask --app app run
 ```
-
-## Running Application
-Running the application requires a congifuration file.
-```powershell
-python app.py
-```
-
-## Configuration
-Application requires a <strong>'data'</strong> folder to store SQLite files.
-```powershell
-cd env
-mkdir data
-```
+The app will run on the local server <strong>http://127.0.0.1:5000</strong>
+<p>To quit program use <strong>CTRL+C</strong> in CLI</p>
 
 ## Leaving Virtual Environment
 ```powershell
 deactivate
 ```
+## Application Features
+<p>You are taken to a home page with a <strong>Tables</strong> dropdown menu with the following options:</p>
+
+    Create Table        Drop Table
+    Populate Table      Show Tables
+    
+<p><strong>'Show Tables'</strong> will redirect to a new page where you can observe the various tables in the databases that currently exist.

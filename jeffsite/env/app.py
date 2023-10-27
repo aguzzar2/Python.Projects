@@ -9,12 +9,12 @@ from werkzeug.datastructures import ImmutableMultiDict
 
 ###############################
 'GLOBALS'
-hell_columns = ['basic', 'standard', 'premium']
+db2_columns = ['basic', 'standard', 'premium']
 animals = "animals.txt"
 sql_types = ['text', 'integer', 'double', 'float', 'character',\
               'date', 'decimal','int', 'char', 'dec', 'varchar',\
                 'enum']
-global_db = "hell.db"
+global_db = "t_db2.db"
 dynamic_db = ''
 data_folder = "env/data/"
 ###############################
