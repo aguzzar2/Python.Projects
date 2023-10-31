@@ -45,7 +45,7 @@ You will see something like <strong>'(env) PS C:\Users'</strong> indicating the 
 ```powershell
 flask --app app run
 ```
-The app will run on the local server <strong>http://127.0.0.1:5000</strong>
+The app will run on the local server, something like :  <strong>http://127.0.0.1:5000</strong>
 <p>To quit program use <strong>CTRL+C</strong> in CLI</p>
 
 ## Leaving Virtual Environment
